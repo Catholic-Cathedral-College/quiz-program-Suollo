@@ -26,8 +26,8 @@ for i in range(loop):
     exit()
   #these are getting diff 1 question answers
   if diffe == 1:
-    answer1 = int(input("What is the official name of the car driven by the main antagonist in Tokyo drift\n          1                     2                     3                     4\n      Fairlady z           Skyline R32           Trueno AE86           Levin AE85\n"))
-    if answer1 == 1:
+    answer1 = int(input("What is the official name of the car driven by the main antagonist in Tokyo drift\n          1                     2                     3                     4\n      Skyline R34           Fairlady z           Trueno AE86           Levin AE85\n"))
+    if answer1 == 2:
       score = score + 1
       print("correct")
     else:
@@ -99,8 +99,8 @@ for i in range(loop):
     else:
       print("Incorrect")
 if score == loop:
-  print("good on ya cunt, your score was", score, "out of", loop)
-elif score != loop:
+  print("good on ya mate, your score was", score, "out of", loop)
+elif score < loop:
   print("you disappointment! this why you not doctor yet! You only get",score ,"out of", loop)
 
-#uwu
+#oUo
