@@ -1,7 +1,7 @@
 def main():
   #this is all init stuff e.g resetting score
   import random
-  import keyboard
+  from pynput import keyboard
   score = 0
   answer1 = 0
   answer2 = 0 
@@ -13,7 +13,7 @@ def main():
   listmedium = [1, 2, 3]
   listhard = [1, 2, 3]
   while True:
-    if keyboard.read_key() == "x":
+    if keyboard.record(until="p"):
       break
     loop = int(input("How many questions do u wantt?"))
     for i in range(loop):
@@ -116,5 +116,5 @@ def main():
     elif score < loop:
       print("you disappointment! this why you not doctor yet! You only get",score ,"out of", loop)
     
-    #oUo
+    #o
 main()
