@@ -1,7 +1,11 @@
 def main():
   #this is all init stuff e.g resetting score
   import random
-  from pynput import keyboard
+  import logging
+  logging.basicConfig(filename="log.txt")
+  from getkey import getkey
+  
+  
   score = 0
   answer1 = 0
   answer2 = 0 
@@ -13,7 +17,7 @@ def main():
   listmedium = [1, 2, 3]
   listhard = [1, 2, 3]
   while True:
-    if keyboard.record(until="p"):
+    if getkey() == "p":
       break
     loop = int(input("How many questions do u wantt?"))
     for i in range(loop):
@@ -115,6 +119,6 @@ def main():
       print("good on ya mate, your score was", score, "out of", loop)
     elif score < loop:
       print("you disappointment! this why you not doctor yet! You only get",score ,"out of", loop)
-    
+
     #o
 main()

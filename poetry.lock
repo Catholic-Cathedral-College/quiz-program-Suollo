@@ -98,14 +98,6 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
-name = "evdev"
-version = "1.6.0"
-description = "Bindings to the Linux input handling subsystem"
-category = "main"
-optional = false
-python-versions = "*"
-
-[[package]]
 name = "flask"
 version = "2.2.1"
 description = "A simple framework for building complex web applications."
@@ -131,6 +123,14 @@ description = "A list-like structure which implements collections.abc.MutableSeq
 category = "main"
 optional = false
 python-versions = ">=3.7"
+
+[[package]]
+name = "getkey"
+version = "0.6.5"
+description = "Read single characters and key-strokes"
+category = "main"
+optional = false
+python-versions = "*"
 
 [[package]]
 name = "idna"
@@ -270,21 +270,6 @@ description = "passive checker of Python programs"
 category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-
-[[package]]
-name = "pynput"
-version = "1.7.6"
-description = "Monitor and control user input devices"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-evdev = {version = ">=1.3", markers = "sys_platform in \"linux\""}
-pyobjc-framework-ApplicationServices = {version = ">=8.0", markers = "sys_platform == \"darwin\""}
-pyobjc-framework-Quartz = {version = ">=8.0", markers = "sys_platform == \"darwin\""}
-python-xlib = {version = ">=0.17", markers = "sys_platform in \"linux\""}
-six = "*"
 
 [[package]]
 name = "pyobjc"
@@ -2208,17 +2193,6 @@ autopep8 = ["autopep8 (>=1.6.0,<1.7.0)"]
 all = ["whatthepatch", "yapf", "rope (>=0.10.5)", "pylint (>=2.5.0)", "pyflakes (>=2.4.0,<2.5.0)", "pydocstyle (>=2.0.0)", "pycodestyle (>=2.8.0,<2.9.0)", "mccabe (>=0.6.0,<0.7.0)", "flake8 (>=4.0.0,<4.1.0)", "autopep8 (>=1.6.0,<1.7.0)"]
 
 [[package]]
-name = "python-xlib"
-version = "0.31"
-description = "Python X Library"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-six = ">=1.10.0"
-
-[[package]]
 name = "pytoolconfig"
 version = "1.2.2"
 description = "Python tool configuration"
@@ -2283,14 +2257,6 @@ pytoolconfig = ">=1.1.2"
 [package.extras]
 doc = ["sphinx-rtd-theme (>=1.0.0)", "sphinx-autodoc-typehints (>=1.18.1)", "sphinx (>=4.5.0)", "pytoolconfig"]
 dev = ["build (>=0.7.0)", "pytest-timeout (>=2.1.0)", "pytest (>=7.0.1)"]
-
-[[package]]
-name = "six"
-version = "1.16.0"
-description = "Python 2 and 3 compatibility utilities"
-category = "main"
-optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "toml"
@@ -2394,7 +2360,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8.0,<3.9"
-content-hash = "6a69ddb4efae85b60da2ce28acf08a98e66e1fd744d7ba59db46dcad0430509b"
+content-hash = "a82622b62fc852f3ac0d42fc35c525c5d0906ff1c170385833a15ddc32b751b1"
 
 [metadata.files]
 aiohttp = []
@@ -2406,9 +2372,9 @@ charset-normalizer = []
 click = []
 colorama = []
 debugpy = []
-evdev = []
 flask = []
 frozenlist = []
+getkey = []
 idna = []
 importlib-metadata = []
 itsdangerous = []
@@ -2422,7 +2388,6 @@ packaging = []
 parso = []
 pluggy = []
 pyflakes = []
-pynput = []
 pyobjc = []
 pyobjc-core = []
 pyobjc-framework-accessibility = []
@@ -2567,12 +2532,10 @@ pyobjc-framework-webkit = []
 pyparsing = []
 python-lsp-jsonrpc = []
 python-lsp-server = []
-python-xlib = []
 pytoolconfig = []
 replit = []
 requests = []
 rope = []
-six = []
 toml = []
 tomli = []
 typing-extensions = []
