@@ -1,25 +1,38 @@
 def main():
   #this is all init stuff e.g resetting score
+  #random function
   import random
-  import logging
-  logging.basicConfig(filename="log.txt")
-  from getkey import getkey
+  #set score
   score = 0
+  #set ans 1 integer value
   answer1 = 0
-  answer2 = 0 
+  #set ans 2 integer value
+  answer2 = 0
+  #set ans 3 integer value
   answer3 = 0
+  #set easy difficulty integer value
   diffe=0
+  #set medium difficulty integer value
   diffm=0
+  #set hard difficulty integer value
   diffq=0
+  #rng lists
   listeasy = [1, 2, 3]
   listmedium = [1, 2, 3]
   listhard = [1, 2, 3]
+  #set tries to 0
   tries = 0
+  #set gamemode integer value
   gamemode = 0
+
+#-----------------Beginning of code---------------------#
+#asking user for gamemode 
   strgamemode = input("WELCOME TO ELI'S QUIZ GAME FOR MY DIGITECH CLASS WORK ASSESMENT THING\n PLEASE CHOOSE A GAMEMODE OUT OF THE FOLLOWING\n 1 = SET AMOUNT MODE 2 = SCORE REACH MODE")
+  #checks if its an integer and continues based on that output
   if strgamemode.isdigit():
     gamemode = int(strgamemode)
     if gamemode == 1:
+      #this is set question mode
       while True:
         #asks for how many questions you want
         strloop = input("How many questions do u wantt?")
@@ -134,12 +147,11 @@ def main():
           elif score < loop:
             print("you disappointment! this why you not doctor yet! You only get",score ,"out of", loop)
           break
-          if getkey() == "p":
-            break
           #o
         else:
           print("please input an integer ")
     elif gamemode == 2:
+      #this is set score mode
       strgamescoregoal = input("To how much score do you wish to play to")
       if strgamescoregoal.isdigit():
         gamescoregoal = int(strgamescoregoal)
@@ -277,3 +289,5 @@ def main():
   else:
     print("Please input an integer")
 main()
+#could you belive I did the entire second gamemode in one day after getting the idea while watching the new cyberpunk anime?
+#its true, even rn im listening to its soundtrack

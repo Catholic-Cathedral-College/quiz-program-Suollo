@@ -7,3 +7,5 @@ if gamemode == 1:
 print("congratulations you have achieved your goal of " + userinputtedscore + " in " + tries + "tries")
 else:
   all the shizz to do gm no1
+
+#the extra names for the gamemodes in readme is just a nickname I used
